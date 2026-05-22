@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
+// @ts-ignore
 import { TrendingUp, Users, CheckCircle, AlertCircle } from 'lucide-react';
 
 interface AnalyticsData {
