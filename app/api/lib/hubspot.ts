@@ -9,7 +9,7 @@ interface Lead {
     lastName: string;
     email: string;
     company: string;
-    annual: string;
+    budget: string;
     hubspotId?: string | null;
 }
 
