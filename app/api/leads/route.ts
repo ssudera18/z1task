@@ -7,10 +7,10 @@ export async function POST(req: NextRequest) {
   try {
     const body = await req.json();
     
-    const { firstName, lastName, email, company, budget } = body;
+    const { firstName, lastName, email, company, budget_range } = body;
     
     // Validate input
-    if (!firstName || !lastName || !email || !company || !budget) {
+    if (!firstName || !lastName || !email || !company || !budget_range) {
       return NextResponse.json(
         { error: 'Missing required fields' },
         { status: 400 }
@@ -23,7 +23,7 @@ export async function POST(req: NextRequest) {
       lastName,
       email,
       company,
-      budget,
+      budget_range,
       createdAt: new Date(),
       hubspotId: null,
       syncStatus: 'pending'

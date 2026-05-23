@@ -9,7 +9,7 @@ export default function LeadForm() {
         lastName: '',
         email: '',
         company: '',
-        budget: 'Under $10k'
+        budget_range: 'Under $10k'
     });
 
     const [loading, setLoading] = useState(false);
@@ -39,7 +39,7 @@ export default function LeadForm() {
                     lastName: '',
                     email: '',
                     company: '',
-                    budget: 'Under $10k'
+                    budget_range: 'Under $10k'
                 });
                 setTimeout(() => setMessage(null), 5000);
             } else {
@@ -139,8 +139,8 @@ export default function LeadForm() {
                             Estimated Annual Budget
                         </label>
                         <select
-                            name="budget"
-                            value={formData.budget}
+                            name="budget_range"
+                            value={formData.budget_range}
                             onChange={handleChange}
                             className="w-full px-4 py-2 border text-black border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                         >

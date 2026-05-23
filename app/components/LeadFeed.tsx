@@ -9,7 +9,7 @@ interface Lead {
     lastName: string;
     email: string;
     company: string;
-    budget: string;
+    budget_range: string;
     createdAt: string;
     syncStatus: 'pending' | 'synced' | 'failed';
 }
@@ -100,7 +100,7 @@ export default function LeadFeed() {
                                     <div className="text-sm text-gray-600">{lead.company}</div>
                                 </td>
                                 <td className="px-6 py-4 whitespace-nowrap">
-                                    <div className="text-sm text-gray-600">{lead.budget}</div>
+                                    <div className="text-sm text-gray-600">{lead.budget_range}</div>
                                 </td>
                                 <td className="px-6 py-4 whitespace-nowrap">
                                     <div className="text-sm text-gray-600">

@@ -9,7 +9,7 @@ interface Lead {
     lastName: string;
     email: string;
     company: string;
-    budget: string;
+    budget_range: string;
     hubspotId?: string | null;
 }
 
@@ -27,7 +27,7 @@ export async function syncLeadToHubSpot(lead: Lead) {
             'Greater than $50k': 'Over 50000'
         };
 
-        const budgetValue = budgetMap[lead.budget] || lead.budget;
+        const budgetValue = budgetMap[lead.budget_range] || lead.budget_range;
 
         const response = await axios.post(
             `${HUBSPOT_API_BASE}/crm/v3/objects/contacts`,

@@ -7,7 +7,7 @@ export interface Lead {
     lastName: string;
     email: string;
     company: string;
-    budget: string;
+    budget_range: string;
     createdAt: Date;
     hubspotId: string | null;
     syncStatus: 'pending' | 'synced' | 'failed';
